@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Chhun</title>
+        <style>
+            body {
+                margin: 0%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+            }
+            .container {
+                background-color: rgb(255, 194, 204);
+                padding: 1.0rem;
+                border-radius: 15px;
+                width: 2៦0;
+            }
+            .btn {
+                padding: 0.5rem 2rem;
+                border: none;
+                outline: none;
+                font-weight: bold;
+                border-radius: 16px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            .btnPrimari {
+                color: white;
+                background-color: rgb(255, 0, 0);
+            }
+            .btnSecondary {
+                padding: 0.5rem 1rem;
+                color: rgb(0, 0, 0);
+                background-color: hwb(327 91% 0%);
+            }
+            .moving{
+                margin-left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <h2 class="text">ស្រលាញ់បងទៅអូន? 😝</h2>
+            <button class="btn btnPrimari">Yes</button>
+            <button class="btn btnSecondary">No</button>
+        </section>
+        <script>
+            const btnAgree = document.querySelector(".btnPrimari")
+            const btnDisagree = document.querySelector(".btnSecondary")
+            const text = document.querySelector(".text")
+
+            btnAgree.addEventListener("click", ()=>{
+                text.innerText = "តោះបឿកថ្ងៃស្អែកហេស៎ 🙃"
+            });
+            btnDisagree.addEventListener("mouseover",()=>{
+                if(btnDisagree.classList.contains("moving"))
+            {
+                btnDisagree.classList.remove("moving")
+            }else{
+                btnDisagree.classList.add("moving")
+            }
+            })
+        </script>
+    </body>
+</html>
